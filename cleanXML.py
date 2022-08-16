@@ -1,3 +1,6 @@
+"""extracts skeletons of ATS xml files for easier understanding
+"""
+
 import os
 import sys
 import glob
@@ -40,18 +43,17 @@ except:
 with open(fin) as f:
     indent = 0
     lines = f.readlines()
+    tout = ''
     for line in lines:
         if indent < 0:
             print('indent < 0 error')
             sys.exit(1)
         if line.strip().startswith('<ParameterList'):
-            with open(fout, 'a') as g:
-                g.write(' '*indent+line.strip().replace(' type="ParameterList"','')+'\n')
+            tout += ' '*indent+line.strip().replace(' type="ParameterList"','')+'\n'
             indent += 8
         elif line.strip().startswith('</ParameterList'):
             indent -= 8
-            with open(fout, 'a') as g:
-                g.write(' '*indent+line.strip().replace(' type="ParameterList"','')+'\n')
-
-            
+            tout += ' '*indent+line.strip().replace(' type="ParameterList"','')+'\n'
+    with open(fout, 'a') as g:
+        g.write(tout)
 
