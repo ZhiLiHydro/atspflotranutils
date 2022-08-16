@@ -19,7 +19,7 @@ elif len(sys.argv) == 2:
     fin = sys.argv[1]
     if not os.path.exists(fin):
         print()
-        print(fin+' does not exit')
+        print(fin+' does not exist')
         fl = glob.glob('*.xml')
         print('working dir has '+str(len(fl))+' xml files:')
         for f,i in zip(fl,range(len(fl))):
@@ -54,6 +54,6 @@ with open(fin) as f:
         elif line.strip().startswith('</ParameterList'):
             indent -= 8
             tout += ' '*indent+line.strip().replace(' type="ParameterList"','')+'\n'
-    with open(fout, 'a') as g:
+    with open(fout, 'w') as g:
         g.write(tout)
 
