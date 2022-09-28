@@ -22,7 +22,7 @@ def get_fin():
             sys.exit(1)
     else:
         print('too many args')
-        print('example: python '+sys.argv[0]+' myinput.xml')
+        print('example: python '+sys.argv[0]+' ats.xml')
         sys.exit(1)
     return fin
 
@@ -42,7 +42,7 @@ def reorganize_fin(fin):
             elif line.strip().startswith('</ParameterList'):
                 indent -= 8
                 t += ' '*indent+line.strip().replace(' type="ParameterList"','')+'\n'
-    fout = fin.split('.xml')[0]+'_cleaned.xml'
+    fout = fin.split('.xml')[0]+'_short.xml'
     with open(fout, 'w') as f:
         f.write(t)
     print(fout+' generated')

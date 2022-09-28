@@ -1,3 +1,8 @@
+'''add pflotran components to ats-only xml file
+now only support cybernetic reaction network
+example: python pflotranate.py ats.xml
+'''
+
 import os
 import sys
 import glob
@@ -22,7 +27,7 @@ def get_fin():
             sys.exit(1)
     else:
         print('too many args')
-        print('example: python '+sys.argv[0]+' myinput.xml')
+        print('example: python '+sys.argv[0]+' ats.xml')
         sys.exit(1)
     return fin
 
@@ -51,7 +56,7 @@ def reorganize_fin(fin):
     fout = fin.split('.xml')[0]+'_pflotran.xml'
     with open(fout, 'w') as f:
         f.write(t)
-    print(fout+' generated')
+    print(fout+' generated (1/3)')
     return fout
 
 def add_pflotran_components(fout, path):
@@ -81,7 +86,7 @@ def add_pflotran_components(fout, path):
                         t += obs
     with open(fout, 'w') as f:
         f.write(t)
-    print(fout+' generated')
+    print(fout+' generated (2/3)')
     return fout
     
 def reorganize_fout(fout):
@@ -104,7 +109,7 @@ def reorganize_fout(fout):
                 t += ' '*indent+line.strip()+'\n'
     with open(fout, 'w') as f:
         f.write(t)
-    print(fout+' generated')
+    print(fout+' generated (3/3)')
     return fout
 
 if __name__ == '__main__':
