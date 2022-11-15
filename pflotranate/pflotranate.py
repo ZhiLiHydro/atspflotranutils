@@ -113,5 +113,5 @@ def reorganize_fout(fout):
     return fout
 
 if __name__ == '__main__':
-    reorganize_fout(add_pflotran_components(reorganize_fin(get_fin()), 'components'))
+    reorganize_fout(add_pflotran_components(reorganize_fin(get_fin()), './pflotran_components'))
 
