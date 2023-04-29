@@ -1,0 +1,73 @@
+CHEMISTRY
+  PRIMARY_SPECIES
+    C5H7O2N(aq)
+    CH2O(aq)
+    CO2(aq)
+    N2(aq)
+    NH4+
+    NO2-
+    NO3-
+    O2(aq)
+    Tsw
+    Tgw
+    Tr	
+  /
+  EXTERNAL_FILE monod_1.txt
+  EXTERNAL_FILE monod_2.txt
+  EXTERNAL_FILE monod_3.txt
+  DATABASE ./cybernetic.dat
+  LOG_FORMULATION
+  ACTIVITY_COEFFICIENTS OFF
+  OUTPUT
+    ALL
+    TOTAL
+  /
+END
+
+CONSTRAINT BCsubsurface
+  CONCENTRATIONS
+    C5H7O2N(aq) 1e-05 T 
+    CH2O(aq) 4.16e-05 T 
+    CO2(aq) 2.48e-03 T 
+    N2(aq) 1e-10 T 
+    NH4+ 1e-10 T 
+    NO2- 1e-10 T 
+    NO3- 3.96e-04 T 
+    O2(aq) 2.67e-04 T
+    Tsw 1e-20 T 
+    Tgw 1e-05 T 
+    Tr 1e-20 T 
+  /
+/
+  
+CONSTRAINT BCrain
+  CONCENTRATIONS
+    C5H7O2N(aq) 1e-05 T 
+    CH2O(aq) 2.58e-04 T 
+    CO2(aq) 1.12e-03 T 
+    N2(aq) 1e-10 T 
+    NH4+ 1e-10 T 
+    NO2- 1e-10 T 
+    NO3- 8.87e-06 T
+    O2(aq) 3.59e-04 T
+    Tsw 1e-20 T 
+    Tgw 1e-20 T 
+    Tr 1e-05 T 
+  /
+/
+
+CONSTRAINT BCsurface
+  CONCENTRATIONS
+    C5H7O2N(aq) 1e-05 T 
+    CH2O(aq) 2.58e-04 T 
+    CO2(aq) 1.12e-03 T 
+    N2(aq) 1e-10 T 
+    NH4+ 1e-10 T 
+    NO2- 1e-10 T 
+    NO3- 8.87e-06 T
+    O2(aq) 3.59e-04 T
+    Tsw 1e-05 T 
+    Tgw 1e-20 T 
+    Tr 1e-20 T 
+  /
+/
