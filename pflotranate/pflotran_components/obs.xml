@@ -4,7 +4,7 @@
       <Parameter name="functional" type="string" value="average" />
       <Parameter name="delimiter" type="string" value="," />
       <Parameter name="time units" type="string" value="s" />
-      <Parameter name="times start period stop" type="Array(double)" value="{ 0, 600,-1}" />
+      <Parameter name="times start period stop" type="Array(double)" value="{ 0, 3600,-1}" />
       <Parameter name="times start period stop units" type="string" value="s" />
       <Parameter name="location name" type="string" value="cell" />
       <Parameter name="number of vectors" type="int" value="11" />
@@ -16,7 +16,7 @@
       <Parameter name="functional" type="string" value="average" />
       <Parameter name="delimiter" type="string" value="," />
       <Parameter name="time units" type="string" value="s" />
-      <Parameter name="times start period stop" type="Array(double)" value="{ 0, 600,-1}" />
+      <Parameter name="times start period stop" type="Array(double)" value="{ 0, 3600,-1}" />
       <Parameter name="times start period stop units" type="string" value="s" />
       <Parameter name="location name" type="string" value="cell" />
       <Parameter name="number of vectors" type="int" value="11" />

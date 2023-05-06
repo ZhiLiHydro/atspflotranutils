@@ -24,7 +24,7 @@ CHEMISTRY
   /
 END
 
-CONSTRAINT BCsubsurface
+CONSTRAINT ICsubsurface
   CONCENTRATIONS
     C5H7O2N(aq) 1e-05 T 
     CH2O(aq) 4.16e-05 T 
@@ -56,7 +56,7 @@ CONSTRAINT BCrain
   /
 /
 
-CONSTRAINT BCsurface
+CONSTRAINT ICsurface
   CONCENTRATIONS
     C5H7O2N(aq) 1e-05 T 
     CH2O(aq) 2.58e-04 T 
