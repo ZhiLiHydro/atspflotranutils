@@ -72,8 +72,8 @@ def add_pflotran_components(fout, path):
                 with open(os.path.join(path, 'pks.xml')) as g:
                     for pks in g:
                         t += pks
-            if 'name=\"field evaluators\"' in line:
-                with open(os.path.join(path, 'state-fieldeval.xml')) as g:
+            if 'name=\"evaluators\"' in line:
+                with open(os.path.join(path, 'state-evals.xml')) as g:
                     for fieldeval in g:
                         t += fieldeval
             if 'name=\"initial conditions\"' in line:

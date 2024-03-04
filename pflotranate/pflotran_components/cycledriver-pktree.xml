@@ -1,5 +1,5 @@
       <ParameterList name="flow and transport">
-        <Parameter name="PK type" type="string" value="flow reactive transport" />
+        <Parameter name="PK type" type="string" value="weak MPC" />
         <ParameterList name="reactive transport" type="ParameterList">
           <Parameter name="PK type" type="string" value="coupled reactive transport" />
           <ParameterList name="chemistry coupler" type="ParameterList">
